@@ -1,0 +1,243 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      background-color: #101414;
+      color: white !important;
+      font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #24292e;
+    color: #ffffff;
+    flex-wrap: wrap; /* Permitir que los elementos pasen a otra línea en pantallas pequeñas */
+  }
+  
+  /* Logo */
+  .header-logo {
+    flex: 1;
+  }
+  
+  .header-logo img {
+    width: 80px;
+  }
+  
+  /* Navegación */
+  .header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  /* Botones de acción */
+  .header-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .header-button {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+  }
+  
+  .header-button:hover {
+    background-color: #ffffff;
+    color: #24292e;
+  }
+  
+  /* Estilos para el buscador */
+  .header-search {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 250px;
+    margin: 10px 0;
+  }
+  
+  .search-input {
+    border: none;
+    padding: 5px 10px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .search-input::placeholder {
+    color: #888;
+  }
+  
+  .search-button {
+    border: none;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #444;
+  }
+  
+  /* Estilos para el botón de mostrar/ocultar formulario */
+  .toggle-form-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #24292e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .toggle-form-button:hover {
+    background-color: #444;
+  }
+  
+  /* Estilos para el formulario de dudas */
+  .contact-form-container {
+    text-align: center;
+  }
+  
+  .contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #24292e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #444;
+  }
+
+/* Main Content */
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+#sec-izq, #sec-der {
+    flex: 1;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    /* Ajustar el header en pantallas más pequeñas */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-logo {
+        margin-bottom: 10px;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-search {
+        width: 100%;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    /* Coloca el contenido en una sola columna */
+    main {
+        flex-direction: column;
+    }
+
+    /* Ajusta el ancho de las secciones */
+    #sec-izq, #sec-der {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustar tamaños de fuente en pantallas pequeñas */
+    body {
+        font-size: 14px;
+    }
+
+    .header-nav ul {
+        gap: 5px;
+    }
+
+    .header-button {
+        padding: 5px 10px;
+    }
+
+    /* Ajustar la anchura del buscador */
+    .header-search {
+        width: 100%;
+    }
+}

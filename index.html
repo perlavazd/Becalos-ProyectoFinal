@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki de Git</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+          <a href="#">
+            <img src="imagenes/pngegg.png" alt="GitHub Logo" class="logo">
+          </a>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li><a href="#">Iniciar</a></li>
+            <li><a href="#">Guías</a></li>
+            <li><a href="#">Recursos</a></li>
+            <li><a href="#">Documentación</a></li>
+          </ul>
+        </nav>
+    
+        <!-- Buscador -->
+        <form class="header-search" action="#" method="get">
+          <input type="text" name="q" placeholder="Buscar en GitHub Docs" class="search-input">
+          <button type="submit" class="search-button">Buscar</button>
+        </form>
+    
+        <div class="header-actions">
+          <a href="#" class="header-button">Iniciar sesión</a>
+          <a href="#" class="header-button">Registrarse</a>
+        </div>
+    
+        <!-- Formulario de contacto dentro del header -->
+        <section class="contact-form-container">
+          <button onclick="toggleForm()" class="toggle-form-button">Tus dudas</button>
+          <div id="contact-form" class="contact-form" style="display: none;">
+            <h2>Envíanos tus dudas</h2>
+            <form action="#" method="post">
+              <label for="name">Nombres:</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="surname">Apellidos:</label>
+              <input type="text" id="surname" name="surname" required>
+              
+              <label for="email">Correo Electrónico:</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="location">Lugar de Origen:</label>
+              <input type="text" id="location" name="location" required>
+              
+              <label for="phone">Número Celular:</label>
+              <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+              
+              <label for="message">Tu duda:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+              
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </section>
+      </header>
+    
+      <script>
+        function toggleForm() {
+          const form = document.getElementById('contact-form');
+          form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+      </script>
+
+        <ul>
+            <li>
+                Documentación de GitHub
+            </li>
+            <li>
+                Version: Free, Pro & Team
+            </li>
+        </ul>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <li>Póngase en marcha</li>
+            <li>Crear una cuenta</li>
+            <li>Hola Mundo</li>
+            <li>Configure su perfil</li>
+            <li>Encontrar inspiración</li>
+            <li>Descarga de archivos</li>
+            <li>Carga de un proyecto</li>
+            <li>Recursos de Aprendizaje</li>
+            <li>Incorporación</li>
+            <li>Utilizar GitHub</li>
+            <li>Explorar integraciones</li>
+            <li>Accesibilidad</li>
+            <li>Archivar cuentas y repositorios públicos</li>
+            <li>Uso de GitHub Docs</li>
+            <li>GitHub Certifications</li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="sec-izq">
+            <h1>Acerca de GitHub y Git</h1>
+            <p>GitHub es una plataforma de desarrollo colaborativo que aloja proyectos utilizando el sistema de control de versiones Git. Permite a los desarrolladores trabajar juntos en proyectos desde cualquier lugar.</p>
+
+            <h2>Acerca de GitHub</h2>
+            <p>GitHub es una plataforma donde puedes almacenar, compartir y trabajar junto con otros usuarios para escribir código. Almacenar tu código en un "repositorio" en GitHub te permite:</p>
+            <ul>
+                <li>Presentar o compartir el trabajo.</li>
+                <li>Seguir y administrar los cambios en el código a lo largo del tiempo.</li>
+                <li>Dejar que otros usuarios revisen el código y realicen sugerencias para mejorarlo.</li>
+                <li>Colaborar en un proyecto compartido, sin preocuparse de que los cambios afecten al trabajo de los colaboradores antes de que esté listo para integrarlos.</li>
+            </ul>
+            <p>El trabajo colaborativo, una de las características fundamentales de GitHub, es posible gracias al software de código abierto Git, en el que se basa GitHub.</p>
+
+            <h2>Acerca de Git</h2>
+            <p>Git es un sistema de control de versiones distribuido que realiza un seguimiento de los cambios en los archivos. Es especialmente útil cuando un grupo de personas y tú estáis haciendo cambios en los mismos archivos al mismo tiempo.</p>
+            <p>Normalmente, para hacerlo en un flujo de trabajo basado en Git, harías lo siguiente:</p>
+            <ul>
+                <li>Crear una rama a partir de la copia principal de archivos en los que tú (y tus colaboradores) estáis trabajando.</li>
+                <li>Realizar modificaciones en los archivos de forma independiente y segura en tu propia rama personal.</li>
+                <li>Dejar que Git fusione mediante combinación y de forma inteligente los cambios específicos en la copia principal de archivos, de modo que los cambios no afecten a las actualizaciones de otras personas.</li>
+                <li>Dejar que Git realice un seguimiento de tus cambios y los de otras personas, por lo que todos siguen trabajando en la versión más actualizada del proyecto.</li>
+            </ul>
+
+            <h2>¿Cómo funcionan Git y GitHub juntos?</h2>
+            <p>Al cargar archivos en GitHub, los almacenas en un "repositorio de Git". Esto significa que al realizar cambios (o "commits") en los archivos de GitHub, Git se iniciará automáticamente para realizar un seguimiento y administrar los cambios.</p>
+            <p>Cuando empieces a colaborar con otros y todos necesitéis trabajar en el mismo repositorio al mismo tiempo, haréis lo siguiente continuamente:</p>
+            <ul>
+                <li>Extraer todos los cambios más recientes realizados por los colaboradores del repositorio remoto en GitHub.</li>
+                <li>Transferir de vuelta los cambios al mismo repositorio remoto en GitHub.</li>
+            </ul>
+
+            <h2>¿Dónde empiezo?</h2>
+            <p>Si no estás familiarizado con GitHub y Git, te recomendamos consultar los artículos de la categoría "Póngase en marcha". Los artículos se centran en las tareas que puedes completar directamente en el explorador en GitHub y te ayudarán a:</p>
+            <ul>
+                <li>Crear una cuenta en GitHub.</li>
+                <li>Aprender el "flujo GitHub" y los principios clave del trabajo colaborativo (ramas, compromisos, solicitudes de cambios, fusiones por combinación).</li>
+                <li>Personalizar tu perfil para compartir tus intereses y aptitudes.</li>
+                <li>Explorar GitHub para encontrar inspiración para tus propios proyectos y conectarte con otros usuarios.</li>
+                <li>Obtener información sobre cómo descargar código interesante para tu propio uso.</li>
+                <li>Obtener información sobre cómo cargar algo en lo que estás trabajando en un repositorio GitHub.</li>
+            </ul>
+
+            <h2>Pasos siguientes</h2>
+            <ul>
+                <li>"Creación de una cuenta en GitHub"</li>
+            </ul>
+
+            <h2>Información adicional</h2>
+            <ul>
+                <li>"Conexión a GitHub"</li>
+            </ul>
+
+            <h3>Ayuda y soporte técnico</h3>
+            <p>¿Encontraste lo que necesitabas?</p>
+            <img src="imagenes/like.png" style="width: auto; height: auto;">
+            <img src="imagenes/dontlike.png">
+            <br>
+            <a href="https://docs.github.com/es/site-policy/privacy-policies/github-privacy-statement">Directiva de privacidad</a>
+            <h3>¿Aún necesitas ayuda?</h3>
+            <ul>
+                <li><a href="https://github.com/orgs/community/discussions">Pregúntale a la comunidad de GitHub</a></li>
+                <li><a href="https://support.github.com/">Ponte en contacto con el soporte técnico</a></li>
+            </ul>
+        </section>
+
+        <section id="sec-der">
+            <!-- Sección para contenido adicional en la parte derecha si se requiere -->
+        </section>
+    </main>
+</body>
+</html>
