@@ -39,6 +39,9 @@ Para ejecutar este proyecto en tu máquina local, asegúrate de tener lo siguien
 
 - **Un navegador web** (Chrome, Firefox, Safari, etc.).
 
+##Link 
+- [Página desarrolada](https://perlavazd.github.io/Becalos-ProyectoFinal/)
+
 ## Integrantes 
 
 - Sebastián Torres
